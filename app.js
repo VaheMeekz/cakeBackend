@@ -15,26 +15,28 @@ const aboutUsRouterInfo = require('./routes/aboutUsInfo')
 const contactUsRouter = require('./routes/contactUs')
 const subscribersRouter = require('./routes/subscribers')
 const contactsRouter = require('./routes/contacts')
+const homeBannerRouter = require('./routes/homeBanner')
 require('dotenv').config()
 
-const swaggerOptions = {
-  swaggerDefinition: {
-    info: {
-      version: "1.0.0",
-      title: "Cake Backend API Documentation",
-      description: "documents",
-      contact: {
-        name: "Amazing Developer"
-      },
-      servers: ["http://localhost:5000"]
-    }
+const swaggerJSDoc = require('swagger-jsdoc');
+
+const swaggerDefinition = {
+  openapi: '3.0.0',
+  info: {
+    title: 'Cake Backend API Documentation',
+    version: '1.0.0',
   },
-  // ['.routes/*.js']
-  apis: ["app.js"]
 };
 
-const swaggerDocs = swaggerJsDoc(swaggerOptions);
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+const options = {
+  swaggerDefinition,
+  // Paths to files containing OpenAPI definitions
+  apis: ['./routes/*.js'],
+};
+
+const swaggerSpec = swaggerJSDoc(options);
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -54,6 +56,7 @@ app.use('/api/v1/aboutUsInfo', aboutUsRouterInfo);
 app.use('/api/v1/contactUs', contactUsRouter);
 app.use('/api/v1/subscribers', subscribersRouter);
 app.use('/api/v1/contacts', contactsRouter);
+app.use('/api/v1/homeBanner', homeBannerRouter);
 
 //end useRoutes
 

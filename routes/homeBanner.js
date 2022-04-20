@@ -6,7 +6,7 @@ const adminMiddleware = require("../middlewares/addminAuthMiddleware")
 
 
 //user routes
-router.get('/get', homeBannerController.get)
+router.get('/', homeBannerController.get)
 //admin routes
 router.post('/create', adminMiddleware, upload.single("image"), homeBannerController.create)
 router.get('/edit', adminMiddleware, homeBannerController.edit)

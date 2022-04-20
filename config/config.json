@@ -3,21 +3,21 @@
     "username": "postgres",
     "password": 20012021,
     "database": "cakeDb",
-    "host": "postgres://odeyutiirfscxm:aa50b131764537d2cf1f1a3fbfde560b5bfc70d25bca98c98a72da8249626bdb@ec2-52-203-118-49.compute-1.amazonaws.com:5432/der9ak6gn2fpc7",
+    "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "username": "postgres",
     "password": 20012021,
     "database": "cakeDb",
-    "host": "postgres://odeyutiirfscxm:aa50b131764537d2cf1f1a3fbfde560b5bfc70d25bca98c98a72da8249626bdb@ec2-52-203-118-49.compute-1.amazonaws.com:5432/der9ak6gn2fpc7",
+    "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
     "username": "postgres",
     "password": 20012021,
     "database": "cakeDb",
-    "host": "postgres://odeyutiirfscxm:aa50b131764537d2cf1f1a3fbfde560b5bfc70d25bca98c98a72da8249626bdb@ec2-52-203-118-49.compute-1.amazonaws.com:5432/der9ak6gn2fpc7",
+    "host": "127.0.0.1",
     "dialect": "postgres"
   }
 }

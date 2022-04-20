@@ -34,7 +34,6 @@ const create = async (req, res) => {
         }
 
         const token = jwt.sign({user_id: user.id}, process.env.TOKEN_KEY, {
-            // expiresIn: "2h",
         });
         user.token = token;
         user.save();

@@ -4,11 +4,61 @@ const usersCotroller = require("../controllers/usersController")
 const adminMiddleware = require("../middlewares/addminAuthMiddleware")
 
 //user routes
-router.post('/create',usersCotroller.create)
-router.post('/login',usersCotroller.login)
+
+
+/**
+ * @swagger
+ * /api/v1/users/users/create:
+ *   post:
+ *     summary: Register.
+ *     responses:
+ *       201:
+ *         description: Created
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                     name:
+ *                       type: string
+ *                       description: The user ID.
+ *                       example: 0
+ *                     email:
+ *                       type: string
+ *                       description: The user's name.
+ *                       example: gago@mail.com
+ *                     password:
+ *                       type: string
+ *                       description: The user's name.
+ *                       example: gago123456
+ */
+router.post('/create', usersCotroller.create)
+/**
+ * @swagger
+ * /api/v1/users/users/login:
+ *   post:
+ *     summary: Login.
+ *     responses:
+ *       201:
+ *         description: Created
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                     email:
+ *                       type: string
+ *                       description: The user's name.
+ *                       example: gago@mail.com
+ *                     password:
+ *                       type: string
+ *                       description: The user's name.
+ *                       example: gago123456
+ */
+router.post('/login', usersCotroller.login)
 
 //admin routes
-router.post('/delete',adminMiddleware,usersCotroller.deleteUser)
-router.get('/',adminMiddleware,usersCotroller.getAll)
+router.post('/delete', adminMiddleware, usersCotroller.deleteUser)
+router.get('/', adminMiddleware, usersCotroller.getAll)
 
 module.exports = router;
