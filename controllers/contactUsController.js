@@ -2,10 +2,10 @@ const ContactUs = require('../models').ContactUs
 const transporter = require('../utils/nodemailer/transporter')
 const create = async (req, res) => {
     try {
-        const {name, email, message} = req.body
+        const {name, email,subject, message} = req.body
 
         const newContact = await ContactUs.create({
-            name, email, message
+            name, email,subject, message
         })
         return res.json({message: "Message are sended!"})
     } catch (e) {

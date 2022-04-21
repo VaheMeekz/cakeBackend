@@ -1,22 +1,36 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('ContactUs', {
+    await queryInterface.createTable('AboutUsBanners', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
+      titleHy: {
         type: Sequelize.STRING
       },
-      email: {
+      titleRu: {
         type: Sequelize.STRING
       },
-      subject:Sequelize.STRING,
-      message: {
-        type: Sequelize.STRING(1234)
+      titleEn: {
+        type: Sequelize.STRING
+      },
+      subTititleHy: {
+        type: Sequelize.STRING
+      },
+      subTitleRu: {
+        type: Sequelize.STRING
+      },
+      subTitleEn: {
+        type: Sequelize.STRING
+      },
+      image: {
+        type: Sequelize.STRING
+      },
+      cloudinary_id: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
@@ -29,6 +43,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('ContactUs');
+    await queryInterface.dropTable('AboutUsBanners');
   }
 };

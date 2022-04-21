@@ -18,13 +18,13 @@ module.exports = {
         type: Sequelize.STRING
       },
       textHy: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(1234)
       },
       textEn: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(1234)
       },
       textRu: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(1234)
       },
       createdAt: {
         allowNull: false,

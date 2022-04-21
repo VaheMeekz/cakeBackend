@@ -17,9 +17,9 @@ module.exports = (sequelize, DataTypes) => {
     titleHy: DataTypes.STRING,
     titleEn: DataTypes.STRING,
     titleRu: DataTypes.STRING,
-    textHy: DataTypes.STRING,
-    textEn: DataTypes.STRING,
-    textRu: DataTypes.STRING
+    textHy: DataTypes.STRING(1234),
+    textEn: DataTypes.STRING(1234),
+    textRu: DataTypes.STRING(1234)
   }, {
     sequelize,
     modelName: 'AboutUsInfo',

@@ -1,5 +1,5 @@
 //constants
-const HomeBanner = require("../models").HomeBanner
+const HomeBanner = require("../models").AboutUsBanner
 const cloudinary = require("../utils/cloudinary/cloudinary")
 
 const create = async (req, res) => {

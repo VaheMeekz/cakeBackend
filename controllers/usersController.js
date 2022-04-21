@@ -76,13 +76,17 @@ const login = async (req, res) => {
 const deleteUser = async (req, res) => {
     try {
         const {id} = req.body
-
+        const offset =  0;
+        const limit =5;
         if (!id) {
             return res.json({error: ["Invalid credentials"]});
         }
 
         const user = await User.destroy({where: {id}})
-        const allUsers = await User.findAll()
+        const allUsers = await User.findAll({
+            offset: offset * limit,
+            limit,
+    })
         return res.json(allUsers)
     } catch (e) {
         console.log("Something went wrong", e)
@@ -93,12 +97,13 @@ const getAll = async (req, res) => {
     try {
         const offset = Number.parseInt(req.query.offset) || 0;
         const limit = Number.parseInt(req.query.limit) || 2;
+        console.log(offset,limit)
         const allUsers = await User.findAll()
 
         const paginateUsers = await User.findAll({
             offset: offset * limit,
             limit,
-            order: [["DESC"]],
+            // order: [["DESC"]],
         });
         return res.json({users: paginateUsers, count: allUsers.length});
     } catch (e) {
