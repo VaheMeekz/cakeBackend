@@ -9,6 +9,7 @@ const adminMiddleware = require("../middlewares/addminAuthMiddleware")
 router.get('/', homeBannerController.get)
 //admin routes
 router.post('/create', adminMiddleware, upload.single("image"), homeBannerController.create)
+router.post('/edit',adminMiddleware,homeBannerController.edit)
 router.put('/edit/:id', adminMiddleware, upload.single("image"),homeBannerController.edit)
-
+router.post('/editImage',adminMiddleware,homeBannerController.editImage)
 module.exports = router;

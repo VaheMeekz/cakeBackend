@@ -21,11 +21,11 @@ const edit = async (req, res) => {
 
     const thisContacts = await Contacts.findOne({where: {id}})
 
-    thisContacts.location = location
-    thisContacts.email = email
-    thisContacts.phone = phone
-    thisContacts.facebook = facebook
-    thisContacts.instagram = instagram
+    thisContacts.location = location || thisContacts.location
+    thisContacts.email = email || thisContacts.email
+    thisContacts.phone = phone || thisContacts.phone
+    thisContacts.facebook = facebook || thisContacts.facebook
+    thisContacts.instagram = instagram || thisContacts.instagram
     thisContacts.save()
 
     return res.json(thisContacts)
@@ -35,8 +35,9 @@ const get = async (req, res) => {
     try {
         const contacts = await Contacts.findAll({
             limit: 1,
-            order: [["DESC"]],
         })
+
+        return res.json(contacts)
     } catch (e) {
         console.log("something went wrong", e)
     }

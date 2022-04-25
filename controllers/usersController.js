@@ -97,13 +97,11 @@ const getAll = async (req, res) => {
     try {
         const offset = Number.parseInt(req.query.offset) || 0;
         const limit = Number.parseInt(req.query.limit) || 2;
-        console.log(offset,limit)
         const allUsers = await User.findAll()
 
         const paginateUsers = await User.findAll({
             offset: offset * limit,
             limit,
-            // order: [["DESC"]],
         });
         return res.json({users: paginateUsers, count: allUsers.length});
     } catch (e) {

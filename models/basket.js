@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class HomeBanner extends Model {
+  class Basket extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,17 +13,20 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  HomeBanner.init({
-    titleHy: DataTypes.STRING,
-    titleEn: DataTypes.STRING,
-    titleRu: DataTypes.STRING,
-    subTitleHy: DataTypes.STRING,
-    subTitleEn: DataTypes.STRING,
-    subTitleRu: DataTypes.STRING,
-    image: DataTypes.STRING,
+  Basket.init({
+    product_id: DataTypes.STRING,
+    user_id: DataTypes.STRING,
+    quantity: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'HomeBanner',
+    modelName: 'Basket',
   });
-  return HomeBanner;
+
+
+  let User = sequelize.define("User");
+  Basket.belongsTo(User, {
+    foreignKey: "user_id",
+  });
+
+  return Basket;
 };

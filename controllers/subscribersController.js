@@ -23,7 +23,6 @@ const getAll = async (req, res) => {
         const paginateSubscribers = await Subscribers.findAll({
             offset: offset * limit,
             limit,
-            order: [["DESC"]],
         });
         return res.json({subscribers: paginateSubscribers, count: allSubscribers.length});
     } catch (e) {

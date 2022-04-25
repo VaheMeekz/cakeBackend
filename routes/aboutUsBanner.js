@@ -9,7 +9,7 @@ const upload = require("../utils/multer/multer");
 router.get('/', aboutUsBannerController.get)
 //admin routes
 router.post('/create', adminMiddleware, upload.single("image"), aboutUsBannerController.create)
-router.put('/edit/:id', adminMiddleware, upload.single("image"),aboutUsBannerController.edit)
-
+router.post('/edit', adminMiddleware,aboutUsBannerController.edit)
+router.post('/editImage',adminMiddleware,aboutUsBannerController.editImage)
 
 module.exports = router;

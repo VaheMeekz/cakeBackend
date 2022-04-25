@@ -34,5 +34,17 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'User',
   });
+
+
+  let Basket = sequelize.define("Basket");
+  let WishList = sequelize.define("WishList")
+  User.hasMany(Basket, {
+    foreignKey: "id",
+  });
+
+  User.hasMany(WishList, {
+    foreignKey: "id",
+  });
+
   return User;
 };

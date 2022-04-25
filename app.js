@@ -17,23 +17,28 @@ const contactUsRouter = require('./routes/contactUs')
 const subscribersRouter = require('./routes/subscribers')
 const contactsRouter = require('./routes/contacts')
 const homeBannerRouter = require('./routes/homeBanner')
+const aboutUsBannerRouter = require('./routes/aboutUsBanner')
+const productRouter = require('./routes/product')
+const categoryRouter = require('./routes/category')
+const basketRouter = require('./routes/basket')
+const wishRouter = require('./routes/wishList')
 require('dotenv').config()
 app.use(cors())
 
 const swaggerJSDoc = require('swagger-jsdoc');
 
 const swaggerDefinition = {
-  openapi: '3.0.0',
-  info: {
-    title: 'Cake Backend API Documentation',
-    version: '1.0.0',
-  },
+    openapi: '3.0.0',
+    info: {
+        title: 'Cake Backend API Documentation',
+        version: '1.0.0',
+    },
 };
 
 const options = {
-  swaggerDefinition,
-  // Paths to files containing OpenAPI definitions
-  apis: ['./routes/*.js'],
+    swaggerDefinition,
+    // Paths to files containing OpenAPI definitions
+    apis: ['./routes/*.js'],
 };
 
 const swaggerSpec = swaggerJSDoc(options);
@@ -45,7 +50,7 @@ app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 //use Routes
@@ -58,23 +63,28 @@ app.use('/api/v1/contactUs', contactUsRouter);
 app.use('/api/v1/subscribers', subscribersRouter);
 app.use('/api/v1/contacts', contactsRouter);
 app.use('/api/v1/homeBanner', homeBannerRouter);
+app.use('/api/v1/aboutUsBanner', aboutUsBannerRouter);
+app.use('/api/v1/products', productRouter);
+app.use('/api/v1/category', categoryRouter);
+app.use('/api/v1/basket', basketRouter);
+app.use('/api/v1/wish', wishRouter);
 
 //end useRoutes
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
+app.use(function (req, res, next) {
+    next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+app.use(function (err, req, res, next) {
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+    // render the error page
+    res.status(err.status || 500);
+    res.render('error');
 });
 
 module.exports = app;

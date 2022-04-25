@@ -1,3 +1,4 @@
+const {AboutUsBanner: HomeBanner} = require("../models");
 const AboutUs = require('../models').AboutUs
 
 
@@ -18,16 +19,12 @@ const create = async (req, res) => {
 const edit = async (req, res) => {
     try {
         const {id, titleHy, titleEn, titleRu, textHy, textEn, textRu} = req.body
-        const thisAboutUs = await AboutUs.findOne({where: {id}})
+        const thisAboutUs = await AboutUs.destroy({ where: { id } })
+        const newAbout = await AboutUs.create({
+            id:1, titleHy, titleEn, titleRu, textHy, textEn, textRu
+        })
 
-        thisAboutUs.titleHy = titleHy
-        thisAboutUs.titleEn = titleEn
-        thisAboutUs.titleRu = titleRu
-        thisAboutUs.textHy = textHy
-        thisAboutUs.textEn = textEn
-        thisAboutUs.textRu = textRu
-        thisAboutUs.save()
-        return res.json(thisAboutUs)
+        return res.json(newAbout)
     }catch (e) {
         console.log("something went wrong",e)
     }
@@ -38,8 +35,6 @@ const get = async (req, res) => {
     try {
         const aboutUs = await AboutUs.findAll({
             limit:1,
-            order: [["DESC"]],
-
         })
         return res.json(aboutUs)
     } catch (e) {
