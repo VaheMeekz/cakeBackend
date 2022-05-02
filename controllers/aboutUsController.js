@@ -41,9 +41,24 @@ const get = async (req, res) => {
         console.log("something went wrong", e)
     }
 }
+
+const editImage = async (req,res) => {
+    try{
+        const {image,imageId} = req.body
+        const item = await AboutUs.findOne({where:{id:1}})
+        const aboutImages = item.images.split(",")
+        aboutImages[imageId] = image
+        item.images = aboutImages.toString()
+        await item.save()
+        return res.json(item)
+    }catch (e) {
+        console.log('something went wrong',e)
+    }
+}
 module.exports = {
     create,
     edit,
-    get
+    get,
+    editImage
 }
 

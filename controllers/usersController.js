@@ -3,7 +3,8 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 //constants
 const User = require("../models").User
-
+const Basket = require('../models').Basket
+const WishList = require('../models').WishList
 const create = async (req, res) => {
     try {
         const {name, email, password} = req.body
@@ -16,10 +17,10 @@ const create = async (req, res) => {
         });
 
         if (oldUser) {
-            return res.json({error: ["User already exist"]})
-
+            return res.status(404).json({error: ["User already exist"]})
         }
         let encryptedPassword = await bcrypt.hash(password, 10);
+
 
         let user;
         try {
@@ -30,14 +31,14 @@ const create = async (req, res) => {
             });
             user.save();
         } catch (e) {
-            return res.json("something went wrong", e)
+            return res.status(404).json("something went wrong", e)
         }
 
         const token = jwt.sign({user_id: user.id}, process.env.TOKEN_KEY, {
         });
         user.token = token;
         user.save();
-        return res.status(200).json(user);
+        return res.send(user);
     } catch (e) {
         console.log("something went wrong", e)
     }
@@ -46,7 +47,6 @@ const create = async (req, res) => {
 const login = async (req, res) => {
     try {
         const {email, password} = req.body;
-
         if (!(email && password)) {
             return res.json({
                 error: ["Password and email are required fields"],
@@ -56,7 +56,6 @@ const login = async (req, res) => {
         const user = await User.findOne({
             where: {email: email.toLowerCase()},
         });
-
         if (user && (await bcrypt.compare(password, user.password))) {
             const token = jwt.sign(
                 {user_id: user.id, email},
@@ -64,7 +63,7 @@ const login = async (req, res) => {
             );
             user.token = token;
             user.save();
-            return res.status(200).json(user);
+            return res.status(200).send(user);
         }
 
         return res.json({error: ["Invalid credentials"]});
@@ -102,6 +101,7 @@ const getAll = async (req, res) => {
         const paginateUsers = await User.findAll({
             offset: offset * limit,
             limit,
+            include:[Basket,WishList],
         });
         return res.json({users: paginateUsers, count: allUsers.length});
     } catch (e) {

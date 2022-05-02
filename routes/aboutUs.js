@@ -9,6 +9,6 @@ router.get('/', aboutUsController.get)
 // admin routes
 router.post('/', adminMiddleware, aboutUsController.create)
 router.post('/edit', adminMiddleware, aboutUsController.edit)
-
+router.post('/editImage',adminMiddleware,aboutUsController.editImage)
 
 module.exports = router

@@ -14,8 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Basket.init({
-    product_id: DataTypes.STRING,
-    user_id: DataTypes.STRING,
+    product_id: DataTypes.INTEGER,
+    user_id: DataTypes.INTEGER,
     quantity: DataTypes.STRING
   }, {
     sequelize,
@@ -27,6 +27,13 @@ module.exports = (sequelize, DataTypes) => {
   Basket.belongsTo(User, {
     foreignKey: "user_id",
   });
+
+  let Product = sequelize.define("Product");
+  Basket.belongsTo(Product, {
+    foreignKey: "product_id",
+  });
+
+
 
   return Basket;
 };

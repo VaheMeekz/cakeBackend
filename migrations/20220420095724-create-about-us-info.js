@@ -26,6 +26,7 @@ module.exports = {
       textRu: {
         type: Sequelize.STRING(1234)
       },
+      image:Sequelize.STRING,
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
