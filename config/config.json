@@ -1,23 +1,29 @@
 {
   "development": {
     "username": "postgres",
-    "password": 20012021,
+    "password": "20012021",
     "database": "cakeDb",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "username": "postgres",
-    "password": 20012021,
-    "database": "cakeDb",
+    "password": "samo47413878",
+    "database": "cake_db",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "username": "postgres",
-    "password": 20012021,
-    "database": "cakeDb",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "username": "odeyutiirfscxm",
+    "password": "aa50b131764537d2cf1f1a3fbfde560b5bfc70d25bca98c98a72da8249626bdb",
+    "database": "der9ak6gn2fpc7",
+    "host": "ec2-52-203-118-49.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   }
 }

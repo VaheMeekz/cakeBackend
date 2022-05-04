@@ -73,7 +73,7 @@ const all = async (req, res) => {
 
             cat.map((i, index) => {
                 queryObj["category_id"] = {
-                        [Op.in]: cat
+                    [Op.in]: cat
                 }
             })
         }
@@ -182,13 +182,26 @@ const edit = async (req, res) => {
             descriptionEn,
             price,
             image,
-            category_id
+            category_id,
+            longDescriptionHy,
+            longDescriptionRu,
+            longDescriptionEn,
         } = req.body
-        const thisProduct = await Product.destroy({where: {id}})
-        const newProduct = await Product.create({
-            id, nameHy, nameRu, nameEn, descriptionHy, descriptionRu, descriptionEn, price, image, category_id
-        })
-        return res.json(newProduct)
+        const thisProduct = await Product.findOne({where: {id}})
+        thisProduct.nameHy = nameHy
+        thisProduct.nameRu = nameRu
+        thisProduct.nameEn = nameEn
+        thisProduct.image = image
+        thisProduct.price = price
+        thisProduct.category_id = category_id
+        thisProduct.descriptionHy = descriptionHy
+        thisProduct.descriptionRu = descriptionRu
+        thisProduct.descriptionEn = descriptionEn
+        thisProduct.long_description_hy = longDescriptionHy
+        thisProduct.long_description_ru = longDescriptionRu
+        thisProduct.descriptionEn = longDescriptionEn
+        await thisProduct.save()
+        return res.json(thisProduct)
     } catch (e) {
         console.log('something went wrong', e)
     }
@@ -202,6 +215,37 @@ const editImage = async (req, res) => {
         images[imageId] = image
         item.image = images.toString()
         await item.save()
+        return res.json(item)
+    } catch (e) {
+        console.log('something went wrong', e)
+    }
+}
+
+const deleteImage = async (req, res) => {
+    try {
+        const {id, index} = req.body
+        const item = await Product.findOne({where: {id}})
+        const itemImages = item.image.split(",")
+        let newImage = itemImages.filter((i, idx) => idx !== index);
+        item.image = newImage.toString()
+        await item.save()
+        return res.json(item)
+    } catch (e) {
+        console.log('somthing went wrong', e)
+    }
+}
+
+const addImage = async (req, res) => {
+    try {
+        const {id, image} = req.body
+        console.log(id, image);
+
+        const item = await Product.findOne({where: {id}})
+        const itemImages = item.image.split(",")
+        itemImages.push(image)
+        item.image = itemImages.toString()
+        await item.save()
+        console.log(itemImages);
         return res.json(item)
     } catch (e) {
         console.log('something went wrong', e)
@@ -228,5 +272,7 @@ module.exports = {
     getSingle,
     edit,
     deleteItem,
-    editImage
+    editImage,
+    deleteImage,
+    addImage
 }
