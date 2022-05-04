@@ -22,6 +22,21 @@ const productRouter = require('./routes/product')
 const categoryRouter = require('./routes/category')
 const basketRouter = require('./routes/basket')
 const wishRouter = require('./routes/wishList')
+const homeFooterRouter = require('./routes/homeFooter')
+const aboutFooterRouter = require('./routes/aboutFooter')
+const productFooterRouter = require('./routes/productFooter')
+const detailFooterRouter = require('./routes/detailFooter')
+const chooseRouter = require('./routes/choose')
+const deleveryRouter = require('./routes/delevery')
+const termsRouter = require('./routes/terms')
+const DeleveryValuesRouter = require('./routes/deleveryValues')
+const DeleveryDataRouter = require('./routes/deleveryData')
+const TermDataRouter = require('./routes/termData')
+const productBannerRouter = require('./routes/productBanner')
+const wishBannerRouter = require('./routes/wishBanner')
+const basketBannerRouter = require('./routes/bassketBanner')
+const detailBannerRouter = require('./routes/detailBanner')
+const orderRouter = require('./routes/orders')
 require('dotenv').config()
 app.use(cors())
 
@@ -68,6 +83,21 @@ app.use('/api/v1/products', productRouter);
 app.use('/api/v1/category', categoryRouter);
 app.use('/api/v1/basket', basketRouter);
 app.use('/api/v1/wish', wishRouter);
+app.use('/api/v1/homeFooter', homeFooterRouter);
+app.use('/api/v1/aboutFooter', aboutFooterRouter);
+app.use('/api/v1/productFooter', productFooterRouter);
+app.use('/api/v1/detailFooter', detailFooterRouter);
+app.use('/api/v1/choose', chooseRouter);
+app.use('/api/v1/delevery', deleveryRouter);
+app.use('/api/v1/terms', termsRouter);
+app.use('/api/v1/deleveryValue', DeleveryValuesRouter);
+app.use('/api/v1/deleveryData',DeleveryDataRouter)
+app.use('/api/v1/termData',TermDataRouter)
+app.use('/api/v1/productBanner',productBannerRouter)
+app.use('/api/v1/wishBanner',wishBannerRouter)
+app.use('/api/v1/basketBanner',basketBannerRouter)
+app.use('/api/v1/detailBanner',detailBannerRouter)
+app.use('/api/v1/orders',orderRouter)
 
 //end useRoutes
 

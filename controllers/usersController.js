@@ -1,6 +1,7 @@
 //imports
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const {Op} = require('@sequelize/core');
 //constants
 const User = require("../models").User
 const Basket = require('../models').Basket
@@ -94,11 +95,19 @@ const deleteUser = async (req, res) => {
 
 const getAll = async (req, res) => {
     try {
+        const {search} = req.query
         const offset = Number.parseInt(req.query.offset) || 0;
         const limit = Number.parseInt(req.query.limit) || 2;
         const allUsers = await User.findAll()
+        let queryObj = {}
 
+        if(search){
+            queryObj["name"] = {
+                [Op.substring]: String(search)
+            }
+        }
         const paginateUsers = await User.findAll({
+            where:queryObj,
             offset: offset * limit,
             limit,
             include:[Basket,WishList],

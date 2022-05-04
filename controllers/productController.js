@@ -25,6 +25,7 @@ const create = async (req, res) => {
             adition_info_hy,
             adition_info_ru,
             adition_info_en,
+            addition_info_value
         } = req.body
 
 
@@ -44,6 +45,7 @@ const create = async (req, res) => {
             adition_info_hy,
             adition_info_ru,
             adition_info_en,
+            addition_info_value
         })
         return res.json(newProduct)
     } catch (e) {
@@ -56,23 +58,26 @@ const all = async (req, res) => {
         const {category, min_price, max_price, search, lang} = req.query
 
         const offset = Number.parseInt(req.query.offset) || 0;
-        const limit = Number.parseInt(req.query.limit) || 2;
+        const limit = Number.parseInt(req.query.limit) || 6;
         const allUsers = await Product.findAll()
 
 
+        let queryObj = {}
         const filteredByCategory = []
 
         if (category) {
             const cat = category.split(",")
-            const arr = await Category.findAll({where: {id: cat}})
-            arr ? arr.forEach(i => filteredByCategory.push(Number(i.id))) : null
+            // const arr = await Category.findAll({where: {id: category}})
+            // arr ? arr.forEach(i => filteredByCategory.push(Number(i.id))) : null
+
+
+            cat.map((i, index) => {
+                queryObj["category_id"] = {
+                        [Op.in]: cat
+                }
+            })
         }
 
-        let queryObj = {}
-
-        if (category) {
-            queryObj.id = filteredByCategory
-        }
         if (min_price && max_price) {
             queryObj["price"] = {
                 [Op.and]: {
@@ -81,19 +86,16 @@ const all = async (req, res) => {
                 }
             }
         }
-
         if (min_price && !max_price) {
             queryObj["price"] = {
                 [Op.gte]: Number(min_price)
             }
         }
-
         if (!min_price && max_price) {
             queryObj["price"] = {
                 [Op.lte]: Number(max_price)
             }
         }
-
         if (search) {
             if (lang == "am") {
                 queryObj["nameHy"] = {
@@ -113,7 +115,6 @@ const all = async (req, res) => {
                 }
             }
         }
-
         const products = await Product.findAll({
             where: queryObj,
             order: [
@@ -132,19 +133,25 @@ const all = async (req, res) => {
 
 const getAll = async (req, res) => {
     try {
+        const {search} = req.query
         const offset = Number.parseInt(req.query.offset) || 0;
-        const limit = Number.parseInt(req.query.limit) || 2;
+        const limit = Number.parseInt(req.query.limit) || 6;
         const allProducts = await Product.findAll()
-
+        let queryObj = {}
+        if (search) {
+            queryObj["nameHy"] = {
+                [Op.substring]: String(search)
+            }
+        }
         const paginateProducts = await Product.findAll({
+            where: queryObj,
             offset: offset * limit,
             limit,
-            include: ["Category"],
-            include: [
-                {
-                    model: Category, as: "Category"
-                }
-            ],
+            // include: [
+            //     {
+            //         model: Category,
+            //     }
+            // ],
             // attributes: ['Category'],
         });
         return res.json({products: paginateProducts, count: allProducts.length});
@@ -190,14 +197,11 @@ const edit = async (req, res) => {
 const editImage = async (req, res) => {
     try {
         const {id, image, imageId} = req.body
-        console.log(id, image, imageId);
         const item = await Product.findOne({where: {id}})
-        console.log(item);
         const images = item.image.split(",")
         images[imageId] = image
         item.image = images.toString()
         await item.save()
-        console.log(item, "<<<<<<<<<");
         return res.json(item)
     } catch (e) {
         console.log('something went wrong', e)

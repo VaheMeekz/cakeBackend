@@ -46,7 +46,7 @@ const sendAnswer = async (req, res) => {
             },
             function (error, info) {
                 if (error) {
-                    console.log(error);
+                    console.log("something went wrong",error);
                 } else {
                     console.log("Email sent: " + info.response);
                 }

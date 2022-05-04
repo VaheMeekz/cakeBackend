@@ -27,7 +27,6 @@ const editTexts = async (req, res) => {
 const editImage = async (req, res) => {
     try {
         const {image} = req.body
-        console.log(image);
         const item = await Terms.findOne({where: {id: 1}})
         item.bannerImage = image
         await item.save()
@@ -64,7 +63,6 @@ const editTextsWish = async (req, res) => {
 const editImageWish = async (req, res) => {
     try {
         const {image} = req.body
-        console.log(image);
         const item = await Wish.findOne({where: {id: 1}})
         item.image = image
         await item.save()
