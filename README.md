@@ -1,4 +1,0 @@
-# cakeBackend
-
-express
-postgresql

@@ -79,6 +79,7 @@ const aboutUs = [
         textRu: "here are many variations of passages of Lorem Ipsum available, but the majslhing embarrasto repeat predefined chunks as n",
         updatedAt: "2022-04-20T14:17:26.948Z",
         createdAt: "2022-04-20T14:17:26.858Z",
+        images: "https://thefirstyearblog.com/wp-content/uploads/2015/11/Chocolate-Chocolate-Cake-8.jpg,https://thefirstyearblog.com/wp-content/uploads/2015/11/Chocolate-Chocolate-Cake-8.jpg,https://thefirstyearblog.com/wp-content/uploads/2015/11/Chocolate-Chocolate-Cake-8.jpg,https://thefirstyearblog.com/wp-content/uploads/2015/11/Chocolate-Chocolate-Cake-8.jpg"
     }
 ]
 
@@ -104,6 +105,7 @@ const aboutUsInfo = [
         textRu: "here are many variations of passages of Lorem Ipsum available, but the majslhing embarrasto repeat predefined chunks as n",
         updatedAt: "2022-04-20T14:17:26.948Z",
         createdAt: "2022-04-20T14:17:26.858Z",
+        image: "https://as2.ftcdn.net/v2/jpg/03/08/40/43/1000_F_308404381_LqyMIXDPOR6Ut1TqE2cJRQdxomGsQegc.jpg"
     },
     {
         titleHy: "About Us Info Hy 2",
@@ -114,6 +116,7 @@ const aboutUsInfo = [
         textRu: "here are many variations of passages of Lorem Ipsum available, but the majslhing embarrasto repeat predefined chunks as n",
         updatedAt: "2022-04-20T14:17:26.948Z",
         createdAt: "2022-04-20T14:17:26.858Z",
+        image: "https://as2.ftcdn.net/v2/jpg/03/08/40/43/1000_F_308404381_LqyMIXDPOR6Ut1TqE2cJRQdxomGsQegc.jpg"
     },
     {
         titleHy: "About Us Info Hy 3",
@@ -124,6 +127,7 @@ const aboutUsInfo = [
         textRu: "here are many variations of passages of Lorem Ipsum available, but the majslhing embarrasto repeat predefined chunks as n",
         updatedAt: "2022-04-20T14:17:26.948Z",
         createdAt: "2022-04-20T14:17:26.858Z",
+        image: "https://as2.ftcdn.net/v2/jpg/03/08/40/43/1000_F_308404381_LqyMIXDPOR6Ut1TqE2cJRQdxomGsQegc.jpg"
     }
 ]
 
@@ -229,7 +233,7 @@ const aboutUsBanner = [
         image: "https://as2.ftcdn.net/v2/jpg/03/08/40/43/1000_F_308404381_LqyMIXDPOR6Ut1TqE2cJRQdxomGsQegc.jpg",
         updatedAt: "2022-04-20T14:17:26.948Z",
         createdAt: "2022-04-20T14:17:26.858Z",
-        cloudinary_id:"1"
+        cloudinary_id: "1"
     },
 ]
 
@@ -267,155 +271,624 @@ const category = [
 const product = [
     {
         nameHy: "tort 1 hy",
-        nameRu:"tort 1 ru",
+        nameRu: "tort 1 ru",
         nameEn: "tort 1 en",
         model: "898989",
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJtfBMMMly0J3FcTnkLJiLSgViwQZf_z7HViGuwYYrnRP4e9-KrcihyE0rppXPi4aoHWw&usqp=CAU",
-        price: "6500",
-        descriptionHy: "torti masin hy 1",
-        descriptionRu: "torti masin ru 1",
-        descriptionEn:"torti masin en 1",
+        price: 6500,
+        descriptionHy: " hy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        descriptionRu: " ru Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        descriptionEn: "en Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
         category_id: "1",
         updatedAt: "2022-04-20T14:17:26.948Z",
         createdAt: "2022-04-20T14:17:26.858Z",
+        cake_count: "",
+        cake_price: "",
+        cake_addition_name_hy: "",
+        cake_addition_name_ru: "",
+        cake_addition_name_en: "",
+        cake_addition_price: "",
+        long_description_hy: "hy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        long_description_ey: "ru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        long_description_en: "en Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        adition_info_hy: "hy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        adition_info_ru: "ru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        adition_info_en: "en Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        addition_info_value:"500,600,700"
     },
     {
         nameHy: "tort 2 hy",
-        nameRu:"tort 2 ru",
+        nameRu: "tort 2 ru",
         nameEn: "tort 2 en",
         model: "898989",
         image: "https://handletheheat.com/wp-content/uploads/2015/03/Best-Birthday-Cake-with-milk-chocolate-buttercream-SQUARE-550x550.jpg",
-        price: "6500",
-        descriptionHy: "torti masin hy 2",
-        descriptionRu: "torti masin ru 2",
-        descriptionEn:"torti masin en 2",
+        price: 7500,
+        descriptionHy: " hy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        descriptionRu: " ru Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        descriptionEn: "en Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
         category_id: "2",
         updatedAt: "2022-04-20T14:17:26.948Z",
         createdAt: "2022-04-20T14:17:26.858Z",
+        cake_count: "10-12,12-14,14-16",
+        cake_price: "5400,6800,9520",
+        cake_addition_name_hy: "marcipan hy,mankakan hy,vardi terriknerov hy,mi urish dzev hy, prosto hamov hy, shat hamov hy",
+        cake_addition_name_ru: "marcipan ru,mankakan ru,vardi terriknerov ru,mi urish dzev ru, prosto hamov ru, shat hamov ru",
+        cake_addition_name_en: "marcipan en,mankakan en,vardi terriknerov en,mi urish dzev en, prosto hamov en, shat hamov en",
+        cake_addition_price: "3000,5600,4500,2500,9800,7500",
+        long_description_hy: "hy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        long_description_ey: "ru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        long_description_en: "en Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        adition_info_hy: "hy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        adition_info_ru: "ru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        adition_info_en: "en Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        addition_info_value:"500,600,700"
     },
     {
         nameHy: "tort 3 hy",
-        nameRu:"tort 3 ru",
+        nameRu: "tort 3 ru",
         nameEn: "tort 3 en",
         model: "898989",
         image: "https://thefirstyearblog.com/wp-content/uploads/2015/11/Chocolate-Chocolate-Cake-8.jpg",
-        price: "6500",
-        descriptionHy: "torti masin hy 3",
-        descriptionRu: "torti masin ru 3",
-        descriptionEn:"torti masin en 3",
+        price: 4000,
+        descriptionHy: " hy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        descriptionRu: " ru Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        descriptionEn: "en Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
         category_id: "3",
         updatedAt: "2022-04-20T14:17:26.948Z",
         createdAt: "2022-04-20T14:17:26.858Z",
+        cake_count: "10-12,12-14,14-16",
+        cake_price: "1200,5700,9520",
+        cake_addition_name_hy: "marcipan hy,mankakan hy,vardi terriknerov hy,mi urish dzev hy, prosto hamov hy, shat hamov hy",
+        cake_addition_name_ru: "marcipan ru,mankakan ru,vardi terriknerov ru,mi urish dzev ru, prosto hamov ru, shat hamov ru",
+        cake_addition_name_en: "marcipan en,mankakan en,vardi terriknerov en,mi urish dzev en, prosto hamov en, shat hamov en",
+        cake_addition_price: "3000,5600,4500,2500,9800,7500",
+        long_description_hy: "hy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        long_description_ey: "ru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        long_description_en: "en Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        adition_info_hy: "hy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        adition_info_ru: "ru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        adition_info_en: "en Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        addition_info_value:"500,600,700"
+
     },
     {
         nameHy: "tort 4 hy",
-        nameRu:"tort 4 ru",
+        nameRu: "tort 4 ru",
         nameEn: "tort 4 en",
         model: "898989",
         image: "https://handletheheat.com/wp-content/uploads/2015/03/Best-Birthday-Cake-with-milk-chocolate-buttercream-SQUARE-550x550.jpg",
-        price: "6500",
-        descriptionHy: "torti masin hy 4",
-        descriptionRu: "torti masin ru 4",
-        descriptionEn:"torti masin en 4",
+        price: 8600,
+        descriptionHy: " hy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        descriptionRu: " ru Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        descriptionEn: "en Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
         category_id: "4",
         updatedAt: "2022-04-20T14:17:26.948Z",
         createdAt: "2022-04-20T14:17:26.858Z",
+        cake_count: "",
+        cake_price: "",
+        cake_addition_name_hy: "",
+        cake_addition_name_ru: "",
+        cake_addition_name_en: "",
+        cake_addition_price: "",
+        long_description_hy: "hy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        long_description_ey: "ru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        long_description_en: "en Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        adition_info_hy: "hy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        adition_info_ru: "ru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        adition_info_en: "en Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        addition_info_value:"500,600,700"
     },
     {
         nameHy: "tort 5 hy",
-        nameRu:"tort 5 ru",
+        nameRu: "tort 5 ru",
         nameEn: "tort 5 en",
         model: "898989",
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_tlkr-wV7ZgRsCoQkFb-0shmPBPwi8g2VPw&usqp=CAU",
-        price: "6500",
-        descriptionHy: "torti masin hy 5",
-        descriptionRu: "torti masin ru 5",
-        descriptionEn:"torti masin en 5",
+        price: 1230,
+        descriptionHy: " hy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        descriptionRu: " ru Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        descriptionEn: "en Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
         category_id: "1",
         updatedAt: "2022-04-20T14:17:26.948Z",
         createdAt: "2022-04-20T14:17:26.858Z",
+        cake_count: "10-12,12-14,14-16",
+        cake_price: "5100,6500,8220",
+        cake_addition_name_hy: "marcipan hy,mankakan hy,vardi terriknerov hy,mi urish dzev hy, prosto hamov hy, shat hamov hy",
+        cake_addition_name_ru: "marcipan ru,mankakan ru,vardi terriknerov ru,mi urish dzev ru, prosto hamov ru, shat hamov ru",
+        cake_addition_name_en: "marcipan en,mankakan en,vardi terriknerov en,mi urish dzev en, prosto hamov en, shat hamov en",
+        cake_addition_price: "3000,5600,4500,2500,9800,7500",
+        long_description_hy: "hy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        long_description_ey: "ru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        long_description_en: "en Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        adition_info_hy: "hy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        adition_info_ru: "ru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        adition_info_en: "en Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        addition_info_value:"500,600,700"
     },
     {
         nameHy: "tort 6 hy",
-        nameRu:"tort 6 ru",
+        nameRu: "tort 6 ru",
         nameEn: "tort 6 en",
         model: "898989",
         image: "https://handletheheat.com/wp-content/uploads/2015/03/Best-Birthday-Cake-with-milk-chocolate-buttercream-SQUARE-550x550.jpg",
-        price: "6500",
-        descriptionHy: "torti masin hy 6",
-        descriptionRu: "torti masin ru 6",
-        descriptionEn:"torti masin en 6",
+        price: 4561,
+        descriptionHy: " hy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        descriptionRu: " ru Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        descriptionEn: "en Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
         category_id: "2",
         updatedAt: "2022-04-20T14:17:26.948Z",
         createdAt: "2022-04-20T14:17:26.858Z",
+        cake_count: "",
+        cake_price: "",
+        cake_addition_name_hy: "",
+        cake_addition_name_ru: "",
+        cake_addition_name_en: "",
+        cake_addition_price: "",
+        long_description_hy: "hy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        long_description_ey: "ru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        long_description_en: "en Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        adition_info_hy: "hy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        adition_info_ru: "ru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        adition_info_en: "en Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        addition_info_value:"500,600,700"
     },
     {
         nameHy: "tort 7 hy",
-        nameRu:"tort 7 ru",
+        nameRu: "tort 7 ru",
         nameEn: "tort 7 en",
         model: "898989",
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJtfBMMMly0J3FcTnkLJiLSgViwQZf_z7HViGuwYYrnRP4e9-KrcihyE0rppXPi4aoHWw&usqp=CAU",
-        price: "6500",
-        descriptionHy: "torti masin hy 7",
-        descriptionRu: "torti masin ru 7",
-        descriptionEn:"torti masin en 7",
+        price: 7826,
+        descriptionHy: " hy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        descriptionRu: " ru Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        descriptionEn: "en Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
         category_id: "3",
         updatedAt: "2022-04-20T14:17:26.948Z",
         createdAt: "2022-04-20T14:17:26.858Z",
+        cake_count: "1,2,3",
+        cake_price: "1,2,3",
+        cake_addition_name_hy: "marcipan hy,mankakan hy,vardi terriknerov hy,mi urish dzev hy, prosto hamov hy, shat hamov hy",
+        cake_addition_name_ru: "marcipan ru,mankakan ru,vardi terriknerov ru,mi urish dzev ru, prosto hamov ru, shat hamov ru",
+        cake_addition_name_en: "marcipan en,mankakan en,vardi terriknerov en,mi urish dzev en, prosto hamov en, shat hamov en",
+        cake_addition_price: "3000,5600,4500,2500,9800,7500",
+        long_description_hy: "hy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        long_description_ey: "ru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        long_description_en: "en Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        adition_info_hy: "hy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        adition_info_ru: "ru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        adition_info_en: "en Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        addition_info_value:"500,600,700"
     },
     {
         nameHy: "tort 8 hy",
-        nameRu:"tort 8 ru",
+        nameRu: "tort 8 ru",
         nameEn: "tort 8 en",
         model: "898989",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQATbbBRAs-AE3i2375Okg3ZmmorkduG9LyZto3M4LAWcmyHy70QUeIWOq0GjHqgR6w9o0&usqp=CAU",
-        price: "6500",
-        descriptionHy: "torti masin hy 8",
-        descriptionRu: "torti masin ru 8",
-        descriptionEn:"torti masin en 8",
+        image: "http://res.cloudinary.com/armcoding/image/upload/v1650964258/ovb59nfgjxbynyeg7jy2.png,http://res.cloudinary.com/armcoding/image/upload/v1650964265/wdzxzt7upnvktztk1jzh.png,http://res.cloudinary.com/armcoding/image/upload/v1650964275/xy1mk0ntzd2penxhlmto.png",
+        price: 300,
+        descriptionHy: " hy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        descriptionRu: " ru Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        descriptionEn: "en Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
         category_id: "3",
         updatedAt: "2022-04-20T14:17:26.948Z",
         createdAt: "2022-04-20T14:17:26.858Z",
+        cake_count: "",
+        cake_price: "",
+        cake_addition_name_hy: "",
+        cake_addition_name_ru: "",
+        cake_addition_name_en: "",
+        cake_addition_price: "",
+        long_description_hy: "hy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        long_description_ey: "ru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        long_description_en: "en Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        adition_info_hy: "hy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        adition_info_ru: "ru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        adition_info_en: "en Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        addition_info_value:"500,600,700"
     },
     {
         nameHy: "tort 9 hy",
-        nameRu:"tort 9 ru",
+        nameRu: "tort 9 ru",
         nameEn: "tort 9 en",
         model: "898989",
         image: "https://thefirstyearblog.com/wp-content/uploads/2015/11/Chocolate-Chocolate-Cake-8.jpg",
-        price: "6500",
-        descriptionHy: "torti masin hy 9",
-        descriptionRu: "torti masin ru 9",
-        descriptionEn:"torti masin en 9",
+        price: 99999,
+        descriptionHy: " hy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        descriptionRu: " ru Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        descriptionEn: "en Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
         category_id: "2",
         updatedAt: "2022-04-20T14:17:26.948Z",
         createdAt: "2022-04-20T14:17:26.858Z",
+        cake_count: "1,2,3",
+        cake_price: "1,2,3",
+        cake_addition_name_hy: "marcipan hy,mankakan hy,vardi terriknerov hy,mi urish dzev hy, prosto hamov hy, shat hamov hy",
+        cake_addition_name_ru: "marcipan ru,mankakan ru,vardi terriknerov ru,mi urish dzev ru, prosto hamov ru, shat hamov ru",
+        cake_addition_name_en: "marcipan en,mankakan en,vardi terriknerov en,mi urish dzev en, prosto hamov en, shat hamov en",
+        cake_addition_price: "3000,5600,4500,2500,9800,7500",
+        long_description_hy: "hy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        long_description_ey: "ru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        long_description_en: "en Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        adition_info_hy: "hy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        adition_info_ru: "ru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        adition_info_en: "en Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        addition_info_value:"500,600,700"
     },
     {
         nameHy: "tort 10 hy",
-        nameRu:"tort 10 ru",
+        nameRu: "tort 10 ru",
         nameEn: "tort 10 en",
         model: "898989",
         image: "https://handletheheat.com/wp-content/uploads/2015/03/Best-Birthday-Cake-with-milk-chocolate-buttercream-SQUARE-550x550.jpg",
-        price: "6500",
-        descriptionHy: "torti masin hy 10",
-        descriptionRu: "torti masin ru 10",
-        descriptionEn:"torti masin en 10",
+        price: 8524,
+        descriptionHy: " hy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        descriptionRu: " ru Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        descriptionEn: "en Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
         category_id: "3",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+        cake_count: "1,2,3",
+        cake_price: "1,2,3",
+        cake_addition_name_hy: "marcipan hy,mankakan hy,vardi terriknerov hy,mi urish dzev hy, prosto hamov hy, shat hamov hy",
+        cake_addition_name_ru: "marcipan ru,mankakan ru,vardi terriknerov ru,mi urish dzev ru, prosto hamov ru, shat hamov ru",
+        cake_addition_name_en: "marcipan en,mankakan en,vardi terriknerov en,mi urish dzev en, prosto hamov en, shat hamov en",
+        cake_addition_price: "3000,5600,4500,2500,9800,7500",
+        long_description_hy: "hy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        long_description_ey: "ru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        long_description_en: "en Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        adition_info_hy: "hy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        adition_info_ru: "ru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        adition_info_en: "en Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        addition_info_value:"500,600,700"
+    },
+    {
+        nameHy: "tort 11 hy",
+        nameRu: "tort 11 ru",
+        nameEn: "tort 11 en",
+        model: "898989",
+        image: "https://thefirstyearblog.com/wp-content/uploads/2015/11/Chocolate-Chocolate-Cake-8.jpg",
+        price: 2300,
+        descriptionHy: " hy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        descriptionRu: " ru Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        descriptionEn: "en Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        category_id: "4",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+        cake_count: "",
+        cake_price: "",
+        cake_addition_name_hy: "",
+        cake_addition_name_ru: "",
+        cake_addition_name_en: "",
+        cake_addition_price: "",
+        long_description_hy: "hy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        long_description_ey: "ru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        long_description_en: "en Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        adition_info_hy: "hy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        adition_info_ru: "ru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        adition_info_en: "en Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol",
+        addition_info_value:"500,600,700"
+    }
+]
+const basket = [
+    {
+        product_id: "1",
+        user_id: "5",
+        quantity: "1",
         updatedAt: "2022-04-20T14:17:26.948Z",
         createdAt: "2022-04-20T14:17:26.858Z",
     },
     {
-        nameHy: "tort 11 hy",
-        nameRu:"tort 11 ru",
-        nameEn: "tort 11 en",
-        model: "898989",
-        image: "https://thefirstyearblog.com/wp-content/uploads/2015/11/Chocolate-Chocolate-Cake-8.jpg",
-        price: "6500",
-        descriptionHy: "torti masin hy 11",
-        descriptionRu: "torti masin ru 11",
-        descriptionEn:"torti masin en 11",
-        category_id: "4",
+        product_id: "2",
+        user_id: "1",
+        quantity: "4",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    },
+    {
+        product_id: "3",
+        user_id: "5",
+        quantity: "8",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    },
+    {
+        product_id: "6",
+        user_id: "3",
+        quantity: "2",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    },
+    {
+        product_id: "4",
+        user_id: "7",
+        quantity: "9",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    },
+]
+
+const homeFooter = [
+    {
+        titleHy: "hy Story Behind Every piece",
+        titleRu: "hy Story Behind Every piece",
+        titleEn: "hy Story Behind Every piece",
+        subTitleHy: "hy It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout",
+        subTitleRu: "ru It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout",
+        subTitleEn: "en It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout",
+        image: "https://cdn.shopify.com/s/files/1/2107/6729/files/GoldenCurl_BlogPost_287656177_Image24_1024x1024.png?v=1598024030",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    }
+]
+
+const aboutFooter = [
+    {
+        titleHy: "hy Story Behind Every piece",
+        titleRu: "hy Story Behind Every piece",
+        titleEn: "hy Story Behind Every piece",
+        subTitleHy: "hy Company name ",
+        subTitleRu: "ru  Company name",
+        subTitleEn: "en Company name",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXXUp2t-hdQw_-At8QgSR2DB1hRee6HtLxdYd8ACZpcBNHm3jS7s-iPdki9cfysdnhMBA&usqp=CAU",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    }
+]
+
+const productFooter = [
+    {
+        titleHy: "hy Product Behind Every piece",
+        titleRu: "hy Product Behind Every piece",
+        titleEn: "hy Product Behind Every piece",
+        subTitleHy: "hy Company name ",
+        subTitleRu: "ru  Company name",
+        subTitleEn: "en Company name",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnKJeYqwAA4l44tOTk51h1lubTMUPDIxEUO5HAOl-Ouuh-mRvTBtrwqsFlwXa04vIg_LM&usqp=CAU",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    }
+]
+
+const detailFooter = [
+    {
+        titleHy: "hy Product Detail Behind Every piece",
+        titleRu: "hy Product Detail  Behind Every piece",
+        titleEn: "hy Product Detail  Behind Every piece",
+        subTitleHy: "hy Company name ",
+        subTitleRu: "ru  Company name",
+        subTitleEn: "en Company name",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnKJeYqwAA4l44tOTk51h1lubTMUPDIxEUO5HAOl-Ouuh-mRvTBtrwqsFlwXa04vIg_LM&usqp=CAU",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    }
+]
+
+const chooseData = [
+    {
+        titleHy: "hy Why Choose us ",
+        titleRu: "ru Why Choose us ",
+        titleEn: "en Why Choose us ",
+        textHy: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        textRu: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        textEn: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1bPBqwM-3tCtb28RVYPwUU81LOnGocKdgcg&usqp=CAU",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    }
+]
+
+const delevery = [
+    {
+        bannerImage: "http://i.stack.imgur.com/ZuAmS.jpg",
+        titleHy: "hy Delivary Terms",
+        titleRu: "ru Delivary Terms",
+        titleEn: "en Delivary Terms",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z"
+    }
+]
+
+const deleveryData = [
+    {
+        subjectHy: "hy Why Choose us ",
+        subjectRu: "ru Why Choose us ",
+        subjectEn: "en Why Choose us ",
+        answerHy: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        answerRu: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        answerEn: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    },
+    {
+        subjectHy: "hy Why Choose us ",
+        subjectRu: "ru Why Choose us ",
+        subjectEn: "en Why Choose us ",
+        answerHy: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        answerRu: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        answerEn: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    },
+    {
+        subjectHy: "hy Why Choose us ",
+        subjectRu: "ru Why Choose us ",
+        subjectEn: "en Why Choose us ",
+        answerHy: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        answerRu: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        answerEn: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    },
+    {
+        subjectHy: "hy Why Choose us ",
+        subjectRu: "ru Why Choose us ",
+        subjectEn: "en Why Choose us ",
+        answerHy: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        answerRu: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        answerEn: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    },
+    {
+        subjectHy: "hy Why Choose us ",
+        subjectRu: "ru Why Choose us ",
+        subjectEn: "en Why Choose us ",
+        answerHy: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        answerRu: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        answerEn: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    }
+]
+
+const termData = [
+    {
+        subjectHy: "hy Why Choose us ",
+        subjectRu: "ru Why Choose us ",
+        subjectEn: "en Why Choose us ",
+        answerHy: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        answerRu: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        answerEn: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    },
+    {
+        subjectHy: "hy Why Choose us ",
+        subjectRu: "ru Why Choose us ",
+        subjectEn: "en Why Choose us ",
+        answerHy: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        answerRu: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        answerEn: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    },
+    {
+        subjectHy: "hy Why Choose us ",
+        subjectRu: "ru Why Choose us ",
+        subjectEn: "en Why Choose us ",
+        answerHy: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        answerRu: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        answerEn: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    },
+    {
+        subjectHy: "hy Why Choose us ",
+        subjectRu: "ru Why Choose us ",
+        subjectEn: "en Why Choose us ",
+        answerHy: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        answerRu: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        answerEn: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    },
+    {
+        subjectHy: "hy Why Choose us ",
+        subjectRu: "ru Why Choose us ",
+        subjectEn: "en Why Choose us ",
+        answerHy: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        answerRu: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        answerEn: "Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,Lorem ipsum dolor sit ametconsectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    }
+]
+
+
+const terms = [
+    {
+        bannerImage: "http://i.stack.imgur.com/ZuAmS.jpg",
+        titleHy: "hy Delivary Terms",
+        titleRu: "ru Delivary Terms",
+        titleEn: "en Delivary Terms",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    }
+]
+
+const deleveryValues = [
+    {
+        loacation: "Yerevan",
+        price: "2560",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    },
+    {
+        loacation: "Yerevan1",
+        price: "2560",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    },
+    {
+        loacation: "Yerevan1",
+        price: "2560",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    },
+    {
+        loacation: "Yerevan1",
+        price: "2560",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    },
+    {
+        loacation: "Yerevan1",
+        price: "2560",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    },
+    {
+        loacation: "Yerevan1",
+        price: "2560",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    },
+    {
+        loacation: "Yerevan1",
+        price: "2560",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    }
+]
+
+const productBanner = [
+    {
+        image: "http://i.stack.imgur.com/ZuAmS.jpg",
+        titleHy: "hy Delivary Terms",
+        titleRu: "ru Delivary Terms",
+        titleEn: "en Delivary Terms",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    }
+]
+
+const wishBanner = [
+    {
+        image: "http://i.stack.imgur.com/ZuAmS.jpg",
+        titleHy: "hy Delivary Terms",
+        titleRu: "ru Delivary Terms",
+        titleEn: "en Delivary Terms",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    }
+]
+
+const basketBanner = [
+    {
+        image: "http://i.stack.imgur.com/ZuAmS.jpg",
+        titleHy: "hy Delivary Terms",
+        titleRu: "ru Delivary Terms",
+        titleEn: "en Delivary Terms",
+        updatedAt: "2022-04-20T14:17:26.948Z",
+        createdAt: "2022-04-20T14:17:26.858Z",
+    }
+]
+
+const detailBanner = [
+    {
+        image: "http://i.stack.imgur.com/ZuAmS.jpg",
+        titleHy: "hy Delivary Terms",
+        titleRu: "ru Delivary Terms",
+        titleEn: "en Delivary Terms",
         updatedAt: "2022-04-20T14:17:26.948Z",
         createdAt: "2022-04-20T14:17:26.858Z",
     }
@@ -432,5 +905,20 @@ module.exports = {
     homebanner,
     aboutUsBanner,
     category,
-    product
+    product,
+    basket,
+    homeFooter,
+    aboutFooter,
+    productFooter,
+    detailFooter,
+    chooseData,
+    delevery,
+    terms,
+    deleveryValues,
+    deleveryData,
+    termData,
+    productBanner,
+    wishBanner,
+    basketBanner,
+    detailBanner
 }
