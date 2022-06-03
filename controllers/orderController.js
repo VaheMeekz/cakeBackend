@@ -136,8 +136,8 @@ const myOrders = async (req, res) => {
 
 const deleteItem = async (req, res) => {
     try {
-        const {id} = req.body
-        await Orders.destroy({where: {id}})
+        const {orderNumber} = req.body
+        await Orders.destroy({where: {orderNumber}})
         return res.json({message: "Deleted!"})
     } catch (e) {
         console.log('something went wrong', e)
