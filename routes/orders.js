@@ -5,10 +5,12 @@ const adminMiddleware = require("../middlewares/addminAuthMiddleware")
 const authMiddleWare = require('../middlewares/userAuthMiddleware')
 
 //user routes
-router.post('/',authMiddleWare,orderController.create)
-router.get('/my',authMiddleWare,orderController.myOrders)
-router.get('/payment',orderController.payment)
+// router.post('/',authMiddleWare,orderController.create)
+router.post('/', orderController.create)
+// router.get('/my',authMiddleWare,orderController.myOrders)
+router.get('/my', orderController.myOrders)
+router.get('/payment', orderController.payment)
 //admin routes
-router.get('/',adminMiddleware,orderController.getAll)
-router.post('/deleteItem',adminMiddleware,orderController.deleteItem)
+router.post('/deleteItem', adminMiddleware, orderController.deleteItem)
+
 module.exports = router

@@ -1,11 +1,14 @@
 //imports
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const {Op} = require('@sequelize/core');
+const {Op} = require('sequelize');
 //constants
 const User = require("../models").User
 const Basket = require('../models').Basket
 const WishList = require('../models').WishList
+const Forgot = require('../models').ForgotPassword
+const ganerteCode = require('../utils/config/config').generateString
+const nodemailer = require("nodemailer");
 const create = async (req, res) => {
     try {
         const {name, email, password} = req.body
@@ -30,15 +33,14 @@ const create = async (req, res) => {
                 email: email.toLowerCase(),
                 password: encryptedPassword,
             });
-            user.save();
+           await user.save();
         } catch (e) {
-            return res.status(404).json("something went wrong", e)
+            return res.json("something went wrong", {e})
         }
 
-        const token = jwt.sign({user_id: user.id}, process.env.TOKEN_KEY, {
-        });
+        const token = jwt.sign({user_id: user.id}, process.env.TOKEN_KEY, {});
         user.token = token;
-        user.save();
+        await user.save();
         return res.send(user);
     } catch (e) {
         console.log("something went wrong", e)
@@ -48,11 +50,12 @@ const create = async (req, res) => {
 const login = async (req, res) => {
     try {
         const {email, password} = req.body;
+        console.log(email,"email",password,"password");
         if (!(email && password)) {
             return res.json({
                 error: ["Password and email are required fields"],
             });
-        }
+        }    
 
         const user = await User.findOne({
             where: {email: email.toLowerCase()},
@@ -69,15 +72,15 @@ const login = async (req, res) => {
 
         return res.json({error: ["Invalid credentials"]});
     } catch (err) {
-        return res.json({error: ["Error"]});
+        console.log('something went wrong',err)
     }
 }
 
 const deleteUser = async (req, res) => {
     try {
         const {id} = req.body
-        const offset =  0;
-        const limit =5;
+        const offset = 0;
+        const limit = 5;
         if (!id) {
             return res.json({error: ["Invalid credentials"]});
         }
@@ -86,7 +89,7 @@ const deleteUser = async (req, res) => {
         const allUsers = await User.findAll({
             offset: offset * limit,
             limit,
-    })
+        })
         return res.json(allUsers)
     } catch (e) {
         console.log("Something went wrong", e)
@@ -101,16 +104,16 @@ const getAll = async (req, res) => {
         const allUsers = await User.findAll()
         let queryObj = {}
 
-        if(search){
+        if (search) {
             queryObj["name"] = {
                 [Op.substring]: String(search)
             }
         }
         const paginateUsers = await User.findAll({
-            where:queryObj,
+            where: queryObj,
             offset: offset * limit,
             limit,
-            include:[Basket,WishList],
+            include: [Basket, WishList],
         });
         return res.json({users: paginateUsers, count: allUsers.length});
     } catch (e) {
@@ -118,9 +121,89 @@ const getAll = async (req, res) => {
     }
 }
 
+const forgotMail = async (req, res) => {
+    try {
+        const {email} = req.body
+
+        const condidat = await User.findOne({where: {email}})
+        if (!condidat) {
+            return res.json({message: 'user not found', answer: false})
+        } else {
+            const code = ganerteCode(8)
+            let transporter = nodemailer.createTransport({
+                service: "gmail",
+                auth: {
+                    user: process.env.NODEMAILER_USER,
+                    pass: process.env.NODEMAILER_PASSWORD,
+                },
+            })
+           await transporter.sendMail({
+                    from: process.env.NODEMAILER_USER,
+                    to: email,
+                    subject: "Forgot Password",
+                    text: `Your code ${code}`
+                },
+                async function (error, info) {
+                    if (error) {
+                        console.log("something went wrong", error);
+                    } else {
+                        console.log("Email sent: " + info.response);
+                        await Forgot.create({user: email, code})
+                        return res.json({message: "verify code sended", answer: true})
+                    }
+                });
+        }
+    } catch (e) {
+        console.log('something went wrong', e)
+    }
+}
+
+const checkCode = async (req, res) => {
+    try {
+        const {email, code} = req.body
+
+        const condidat = await Forgot.findOne({
+            where: {
+                user: email,
+                code: code
+            }
+        })
+        if(!condidat){
+            return res.json({message:"code not much",answer:false})
+        }else {
+            await Forgot.destroy({where:{user: email}})
+            return res.json({message:"new password",answer:true})
+        }
+    } catch (e) {
+        console.log('something went wrong', e)
+    }
+}
+
+const newPassword = async (req,res) => {
+    try{
+        const {email,password} = req.body
+
+        const user = await User.findOne({where: {email}})
+        if(!user){
+            await Forgot.destroy({where:{user: email}})
+            return res.json({message:"user not found",answer:false})
+        }else {
+            let encryptedPassword = await bcrypt.hash(password, 10);
+            user.password = encryptedPassword
+            await user.save()
+            return res.json({message:'password chaged',answer:true})
+        }
+    }catch (e) {
+        console.log('something went wrong',e)
+    }
+}
+
 module.exports = {
     create,
     login,
     deleteUser,
-    getAll
+    getAll,
+    forgotMail,
+    checkCode,
+    newPassword
 }

@@ -7,7 +7,6 @@ const adminMiddleware = require("../middlewares/addminAuthMiddleware")
 router.get('/',contactsController.get)
 
 //admin routes
-router.post('/',adminMiddleware,contactsController.create)
 router.post('/edit',adminMiddleware,contactsController.edit)
 
 module.exports = router

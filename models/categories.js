@@ -17,14 +17,14 @@ module.exports = (sequelize, DataTypes) => {
     Categories.init({
         nameHy: DataTypes.STRING,
         nameRu: DataTypes.STRING,
-        nameEn: DataTypes.STRING
+        nameEn: DataTypes.STRING,
     }, {
         sequelize,
         modelName: 'Categories',
     });
 
-    let Product = sequelize.define("Product");
-    Categories.hasOne(Product, {
+    let Product = sequelize.define("Products");
+    Categories.belongsTo(Product, {
         foreignKey: "id",
     });
     return Categories;

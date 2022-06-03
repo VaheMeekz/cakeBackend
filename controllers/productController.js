@@ -1,6 +1,6 @@
 const Product = require('../models').Product
 const Category = require('../models').Categories
-const {Op} = require('@sequelize/core');
+const {Op} = require('sequelize');
 const create = async (req, res) => {
     try {
         const {
@@ -61,19 +61,18 @@ const all = async (req, res) => {
         const limit = Number.parseInt(req.query.limit) || 6;
         const allUsers = await Product.findAll()
 
-
         let queryObj = {}
         const filteredByCategory = []
 
         if (category) {
-            const cat = category.split(",")
+            // const cat = category.split(",")
             // const arr = await Category.findAll({where: {id: category}})
             // arr ? arr.forEach(i => filteredByCategory.push(Number(i.id))) : null
 
 
-            cat.map((i, index) => {
+            category.map((i) => {
                 queryObj["category_id"] = {
-                    [Op.in]: cat
+                    [Op.in]: category
                 }
             })
         }

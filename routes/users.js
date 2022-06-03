@@ -56,7 +56,10 @@ router.post('/create', usersCotroller.create)
  *                       example: gago123456
  */
 router.post('/login', usersCotroller.login)
-
+//forgot password
+router.post('/forgotMail',usersCotroller.forgotMail)
+router.post('/checkCode',usersCotroller.checkCode)
+router.post('/newPassword',usersCotroller.newPassword)
 //admin routes
 router.post('/delete', adminMiddleware, usersCotroller.deleteUser)
 router.get('/', adminMiddleware, usersCotroller.getAll)

@@ -30,6 +30,7 @@ module.exports = {
       adition_info_hy:Sequelize.STRING(1234),
       adition_info_ru:Sequelize.STRING(1234),
       adition_info_en:Sequelize.STRING(1234),
+      addition_info_value:Sequelize.STRING(1234),
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

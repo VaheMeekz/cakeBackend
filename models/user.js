@@ -38,11 +38,16 @@ module.exports = (sequelize, DataTypes) => {
 
   let Basket = sequelize.define("Basket");
   let WishList = sequelize.define("WishList")
+  let Order = sequelize.define("Order")
   User.hasMany(Basket, {
     foreignKey: "id",
   });
 
   User.hasMany(WishList, {
+    foreignKey: "id",
+  });
+
+  User.hasMany(Order, {
     foreignKey: "id",
   });
 

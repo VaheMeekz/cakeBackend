@@ -1,20 +1,6 @@
 const Contacts = require("../models").Contacts
 
 
-const create = async (req, res) => {
-    try {
-        const {location, email, phone, facebook, instagram} = req.body
-
-        const contact = await Contacts.create({
-            location, email, phone, facebook, instagram
-        })
-    } catch (e) {
-        console.log("something went wrong", e)
-    }
-
-
-}
-
 const edit = async (req, res) => {
     const {id, location, email, phone, facebook, instagram} = req.body
 
@@ -45,7 +31,6 @@ const get = async (req, res) => {
 
 
 module.exports = {
-    create,
     edit,
     get
 }

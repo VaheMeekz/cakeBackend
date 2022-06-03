@@ -14,8 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Order.init({
-    user_id: DataTypes.STRING,
-    basket_id: DataTypes.STRING,
+    user_id: DataTypes.INTEGER,
+    product_id:DataTypes.INTEGER,
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
     email: DataTypes.STRING,
@@ -26,7 +26,13 @@ module.exports = (sequelize, DataTypes) => {
     delevery: DataTypes.STRING,
     notes: DataTypes.STRING,
     orderNumber: DataTypes.STRING,
-    productDescription: DataTypes.STRING
+    productDescription: DataTypes.STRING,
+    deleveryDate:DataTypes.STRING,
+    deleveryTime:DataTypes.STRING,
+    currency:DataTypes.STRING,
+    additions:DataTypes.STRING,
+    status:DataTypes.STRING,
+    totalPrice:DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Order',
@@ -40,6 +46,7 @@ module.exports = (sequelize, DataTypes) => {
   let Product = sequelize.define("Product");
   Order.belongsTo(Product, {
     foreignKey: "product_id",
+    as:"Product"
   });
 
   return Order;

@@ -5,8 +5,6 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const cors = require('cors')
-const swaggerJsDoc = require("swagger-jsdoc");
-const swaggerUi = require("swagger-ui-express");
 const app = express();
 //routers
 const usersRouter = require('./routes/users');
@@ -55,10 +53,6 @@ const options = {
     // Paths to files containing OpenAPI definitions
     apis: ['./routes/*.js'],
 };
-
-const swaggerSpec = swaggerJSDoc(options);
-
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');

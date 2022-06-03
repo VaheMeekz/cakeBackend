@@ -90,10 +90,35 @@ const deleteAdmin = async (req,res) => {
     }
 }
 
+const logout = async (req,res) => {
+    try{
+        const {email} = req.body
+
+        const admin = await Admin.findOne({
+            where:{email}
+        })
+        admin.token = null
+        await admin.save()
+        return res.json({answer:true})
+    }catch (e) {
+        console.log("something went wrong",e)
+    }
+}
+
+const getAdmins = async (req,res) => {
+    try {
+        const allAdmins = await Admin.findAll()
+        return res.json(allAdmins)
+    }catch (e) {
+        console.log('something went wrong', e)
+    }
+}
 
 module.exports = {
     create,
     login,
-    deleteAdmin
+    deleteAdmin,
+    logout,
+    getAdmins
 }
 
