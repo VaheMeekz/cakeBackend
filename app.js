@@ -38,21 +38,6 @@ const orderRouter = require('./routes/orders')
 require('dotenv').config()
 app.use(cors())
 
-const swaggerJSDoc = require('swagger-jsdoc');
-
-const swaggerDefinition = {
-    openapi: '3.0.0',
-    info: {
-        title: 'Cake Backend API Documentation',
-        version: '1.0.0',
-    },
-};
-
-const options = {
-    swaggerDefinition,
-    // Paths to files containing OpenAPI definitions
-    apis: ['./routes/*.js'],
-};
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
