@@ -4,13 +4,17 @@ const orderController = require("../controllers/orderController")
 const authMiddleWare = require('../middlewares/userAuthMiddleware')
 
 //user routes
-// router.post('/',authMiddleWare,orderController.create)
 router.post('/', orderController.create)
-// router.get('/my',authMiddleWare,orderController.myOrders)
 router.get('/my', orderController.myOrders)
-router.get('/payment', orderController.payment)
-//admin routes
-// router.post('/deleteItem', adminMiddleware, orderController.deleteItem)
-router.post('/deleteItem', orderController.deleteItem)
 
+//payment Idram
+router.post('/succsesIdram',orderController.successPaymentIdram)
+router.post('/failIdram',orderController.failPaymentIdram)
+router.post('/resultIdram',orderController.resultPaymentIdram)
+router.post('/getSingle',orderController.getSingle)
+
+//admin routes
+
+router.post('/deleteItem', orderController.deleteItem)
+router.get('/',orderController.getAll)
 module.exports = router
