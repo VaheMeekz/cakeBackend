@@ -15,32 +15,20 @@ const create = async (req, res) => {
         if (!(email && password)) {
             return res.json("Name, password and email are required fields")
         }
-
         const oldUser = await User.findOne({
             where: {email},
         });
-
         if (oldUser) {
-            return res.status(404).json({error: ["User already exist"]})
+            return res.json({error: ["User already exist"]})
         }
         let encryptedPassword = await bcrypt.hash(password, 10);
 
-
-        let user;
-        try {
-            user = await User.create({
+        let user = await User.create({
                 name,
                 email: email.toLowerCase(),
                 password: encryptedPassword,
             });
-           await user.save();
-        } catch (e) {
-            return res.json("something went wrong", {e})
-        }
 
-        const token = jwt.sign({user_id: user.id}, process.env.TOKEN_KEY, {});
-        user.token = token;
-        await user.save();
         return res.send(user);
     } catch (e) {
         console.log("something went wrong", e)
