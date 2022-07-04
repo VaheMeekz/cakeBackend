@@ -1,6 +1,5 @@
 const users = [
     {
-        id: 1,
         name: "Vahe",
         email: "vahe@mail.com",
         "password": "$2a$10$hoKa68wiWcqxPNjPv2cQQuMnEDf5j6/EM4YY7u7HHS.1Z94etprpy",
@@ -9,7 +8,6 @@ const users = [
         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJpYXQiOjE2NTA0NjQyNDZ9.Di2eqmBOI02rcG_ztZdDrhrrRw9agLb_G--ozXfFoO8"
     },
     {
-        id: 2,
         name: "Gago",
         email: "gago@mail.com",
         "password": "$2a$10$hoKa68wiWcqxPNjPv2cQQuMnEDf5j6/EM4YY7u7HHS.1Z94etprpy",
@@ -18,7 +16,6 @@ const users = [
         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJpYXQiOjE2NTA0NjQyNDZ9.Di2eqmBOI02rcG_ztZdDrhrrRw9agLb_G--ozXfFoO8"
     },
     {
-        id: 3,
         name: "Hamo",
         email: "hamo@mail.com",
         "password": "$2a$10$hoKa68wiWcqxPNjPv2cQQuMnEDf5j6/EM4YY7u7HHS.1Z94etprpy",
@@ -27,7 +24,6 @@ const users = [
         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJpYXQiOjE2NTA0NjQyNDZ9.Di2eqmBOI02rcG_ztZdDrhrrRw9agLb_G--ozXfFoO8"
     },
     {
-        id: 4,
         name: "Ashot",
         email: "ashot@mail.com",
         "password": "$2a$10$hoKa68wiWcqxPNjPv2cQQuMnEDf5j6/EM4YY7u7HHS.1Z94etprpy",
@@ -36,7 +32,6 @@ const users = [
         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJpYXQiOjE2NTA0NjQyNDZ9.Di2eqmBOI02rcG_ztZdDrhrrRw9agLb_G--ozXfFoO8"
     },
     {
-        id: 5,
         name: "Tiko",
         email: "tiko@mail.com",
         "password": "$2a$10$hoKa68wiWcqxPNjPv2cQQuMnEDf5j6/EM4YY7u7HHS.1Z94etprpy",
@@ -45,7 +40,6 @@ const users = [
         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJpYXQiOjE2NTA0NjQyNDZ9.Di2eqmBOI02rcG_ztZdDrhrrRw9agLb_G--ozXfFoO8"
     },
     {
-        id: 6,
         name: "Ero",
         email: "ero@mail.com",
         "password": "$2a$10$hoKa68wiWcqxPNjPv2cQQuMnEDf5j6/EM4YY7u7HHS.1Z94etprpy",

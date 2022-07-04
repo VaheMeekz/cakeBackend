@@ -15,6 +15,7 @@ const create = async (req, res) => {
             paymentType,
             deleveryDate, deleveryTime,
         } = req.body
+        console.log(paymentType,"++++++++++++++++++++++++++++++++++++++++++")
         // orderNumber
         const randomOrderId = Math.floor(
             Math.pow(10, 5) + Math.random() * 5 * Math.pow(10, 5)
@@ -77,26 +78,25 @@ const create = async (req, res) => {
                     response.text();
                 })
                 .then(async (data) => {
-                    const newPayment = await Order.create({
-                        user_id: id,
-                        client_id: ClientID,
-                        description: Description,
-                        amount: Amount,
-                        delevery: Delevery,
-                        email,
-                        lastName: lastname,
-                        firstName: firstname,
-                        phone: phonenumber,
-                        second_phone: phonenumber2,
-                        address: addres,
-                        currency: Currency,
-                        products: JSON.stringify(products),
-                        deleveryDate,
-                        deleveryTime,
-                        PaymentID: randomOrderId,
-                        status: "new",
-                    });
-                    return res.send({ payment_id: newPayment.id });
+                      let item = await Orders.create({
+                            user_id,
+                            product_id: productsId[0],
+                            firstName,
+                            lastName,
+                            email,
+                            phone,
+                            addres,
+                            apartament,
+                            delevery,
+                            orderNumber: randomOrderId,
+                            productDescription,
+                            deleveryDate,
+                            deleveryTime,
+                            currency: "1",
+                            status: "new",
+                            totalPrice
+                        })
+                    return res.send({ payment_id: item.id });
                 })
                 .catch(function (e) {
                     console.log(e, "something went wrong");
@@ -203,7 +203,7 @@ const getSingle = async (req, res) => {
     const { id } = req.body;
 
     if (id) {
-        const thisOrder = await Order.findOne({ where: { id } });
+        const thisOrder = await Orders.findOne({ where: { id } });
         return res.json(thisOrder);
     }
 };
