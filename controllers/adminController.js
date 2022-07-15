@@ -1,50 +1,40 @@
-//imports
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
-//constants
 const Admin = require("../models").Admin
-
-
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");
 
 const create = async (req,res) => {
     try {
-        const {name, email, password} = req.body
-        if (!(email && password)) {
-            return res.json("Name, password and email are required fields")
-        }
-
-        const oldAdmin= await Admin.findOne({
-            where: {email},
-        });
-
-        if (oldAdmin) {
-            return res.json( {error: ["User already exist"]})
-
-        }
+        const {email, password} = req.body
         let encryptedPassword = await bcrypt.hash(password, 10);
-
-        let admin;
-        try {
-            admin = await Admin.create({
-                name,
-                email: email.toLowerCase(),
-                password: encryptedPassword,
-            });
-            admin.save();
-        } catch (e) {
-            return res.json("something went wrong", e)
-        }
-
-        const token = jwt.sign({user_id: admin.id}, process.env.TOKEN_KEY, {
-        });
-        admin.token = token;
-        admin.save();
-        return res.status(200).json(admin);
-    } catch (e) {
-        console.log("something went wrong", e)
+        const newAdmin = await Admin.create({
+            email:email.toLowerCase(), password: encryptedPassword
+        })
+        return res.json(newAdmin)
+    }catch (e) {
+        console.log('something went wrong', e)
     }
 }
 
+const deleteAdmin = async (req,res) => {
+    try {
+        const {id} = req.body
+        await Admin.destroy({
+            where:{id}
+        })
+        return res.json({success:true})
+    }catch (e) {
+        console.log('something went wrong', e)
+    }
+}
+
+const getAll = async (req,res) => {
+    try {
+        const admins = await Admin.findAll()
+        return res.json(admins)
+    }catch (e) {
+        console.log('something went wrong', e)
+    }
+}
 
 const login = async (req,res) => {
     try {
@@ -56,59 +46,35 @@ const login = async (req,res) => {
             });
         }
 
-        const admin = await Admin.findOne({
+        const user = await Admin.findOne({
             where: {email: email.toLowerCase()},
         });
 
-        if (admin && (await bcrypt.compare(password, admin.password))) {
+        if (user && (await bcrypt.compare(password, user.password))) {
             const token = jwt.sign(
-                {user_id: admin.id, email},
+                {user_id: user.id, email},
                 process.env.TOKEN_KEY
             );
-            admin.token = token;
-            admin.save();
-            return res.status(200).json(admin);
+            user.token = token;
+            user.save();
+            return res.status(200).json({admin:user,success:true});
         }
-
         return res.json({error: ["Invalid credentials"]});
-    } catch (err) {
-        return res.json({error: ["Error"]});
-    }
-}
 
-const deleteAdmin = async (req,res) => {
-    try{
-        const {id} = req.body
-
-        if(!id){
-            return res.json({error: ["Invalid credentials"]});
-        }
-        const user = await Admin.destroy({where:{id}})
-        return res.json({message:"Admin is deleted!"})
-    }catch (e){
-        console.log("Something went wrong",e)
+    }catch (e) {
+        console.log('something went wrong', e)
     }
 }
 
 const logout = async (req,res) => {
-    try{
+    try {
         const {email} = req.body
-
         const admin = await Admin.findOne({
             where:{email}
         })
         admin.token = null
         await admin.save()
-        return res.json({answer:true})
-    }catch (e) {
-        console.log("something went wrong",e)
-    }
-}
-
-const getAdmins = async (req,res) => {
-    try {
-        const allAdmins = await Admin.findAll()
-        return res.json(allAdmins)
+        return res.json({success:true})
     }catch (e) {
         console.log('something went wrong', e)
     }
@@ -116,9 +82,8 @@ const getAdmins = async (req,res) => {
 
 module.exports = {
     create,
-    login,
     deleteAdmin,
-    logout,
-    getAdmins
+    getAll,
+    login,
+    logout
 }
-

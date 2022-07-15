@@ -1,52 +1,53 @@
-const Category = require('../models').Categories
+const Category = require("../models").Category
 
-
-const create = async (req, res) => {
+const create = async (req,res) => {
     try {
-        const {nameHy, nameRu, nameEn} = req.body
-
-        const newCategory = await Category.create({
-            nameHy, nameRu, nameEn
+        const {nameHy,nameRu,nameEn,image} = req.body
+        await Category.create({
+            nameHy,nameRu,nameEn,image
         })
-
-        const allCategory = await Category.findAll()
-        return res.json(allCategory)
-    } catch (e) {
-        console.log('something went wrong', e)
-    }
-}
-
-const getAll = async (req, res) => {
-    try{
-        const allCategory = await Category.findAll()
-        return res.json(allCategory)
+        const allCategories = await Category.findAll()
+        return res.json(allCategories)
     }catch (e) {
-        console.log('something went wrong', e)
+        console.log('something went wrong')
     }
 }
 
-const edit = async (req, res) => {
-    try{
-        const {id,nameHy, nameRu, nameEn} = req.body
-        const thisCategory = await Category.destroy({where:{id}})
-        const newCategory = await Category.create({
-            id,nameHy, nameRu, nameEn
-        })
-        const allCategory = await Category.findAll()
-        return res.json(allCategory)
+const getAll = async (req,res) => {
+    try {
+        const allCategories = await Category.findAll()
+        return res.json(allCategories)
     }catch (e) {
-        console.log('something went wrong',e)
+        console.log('something went wrong')
     }
 }
 
-const deleteCategory = async (req, res) => {
-    try{
+const edit = async (req,res) => {
+    try {
+        const {id,nameHy,nameRu,nameEn,image} = req.body
+
+        const category = await Category.findOne({where:{id}})
+
+        category.nameHy = nameHy
+        category.nameRu = nameRu
+        category.nameEn = nameEn
+        category.image = image
+        await category.save()
+        const allCategories = await Category.findAll()
+        return res.json(allCategories)
+    }catch (e) {
+        console.log('something went wrong')
+    }
+}
+
+const deleteCategory = async (req,res) => {
+    try {
         const {id} = req.body
-        const thisCategory = await Category.destroy({where:{id}})
-        const allCategory = await Category.findAll()
-        return res.json(allCategory)
+        await Category.destroy({where:{id}})
+        const allCategories = await Category.findAll()
+        return res.json(allCategories)
     }catch (e) {
-        console.log('something went wrong', e)
+        console.log('something went wrong')
     }
 }
 

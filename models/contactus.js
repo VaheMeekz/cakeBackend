@@ -14,9 +14,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   ContactUs.init({
+    subject: DataTypes.STRING,
     name: DataTypes.STRING,
     email: DataTypes.STRING,
-    subject:DataTypes.STRING,
     message: DataTypes.STRING(1234)
   }, {
     sequelize,

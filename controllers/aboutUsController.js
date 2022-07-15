@@ -1,64 +1,92 @@
-const {AboutUsBanner: HomeBanner} = require("../models");
-const AboutUs = require('../models').AboutUs
+const AboutUp = require("../models").AboutUsUp
+const AboutDown = require("../models").AboutUsDown
 
-
-const create = async (req, res) => {
+//up
+const createUp = async (req, res) => {
     try {
-        const {titleHy, titleEn, titleRu, textHy, textEn, textRu} = req.body
-        const aboutUs = await AboutUs.create({
-            titleHy, titleEn, titleRu, textHy, textEn, textRu
-        })
-        return res.json(aboutUs)
+        const {textHy, textRu, textEn, imgOne, imgTwo} = req.body
 
+        const newUp = await AboutUp.create({
+            textHy, textRu, textEn, imgOne, imgTwo
+        })
+        return res.json(newUp)
+    } catch (e) {
+        console.log("something went wrong", e)
+    }
+}
+
+const getAllUp = async (req, res) => {
+    try {
+        const banner = await AboutUp.findAll({where: {id: 1}})
+        return res.json(banner)
+    } catch (e) {
+        console.log("something went wrong", e)
+    }
+}
+
+const editUp = async (req, res) => {
+    try {
+        const {textHy, textRu, textEn, imgOne, imgTwo} = req.body
+        const banner = await AboutUp.findOne({where: {id: 1}})
+        banner.textHy = textHy
+        banner.textRu = textRu
+        banner.textEn = textEn
+        banner.imgOne = imgOne
+        banner.imgTwo = imgTwo
+        await banner.save()
+        return res.json(banner)
     } catch (e) {
         console.log("something went wrong", e)
     }
 }
 
 
-const edit = async (req, res) => {
+//down
+
+const createDown = async (req, res) => {
     try {
-        const {id, titleHy, titleEn, titleRu, textHy, textEn, textRu} = req.body
-        const thisAboutUs = await AboutUs.destroy({ where: { id } })
-        const newAbout = await AboutUs.create({
-            id:1, titleHy, titleEn, titleRu, textHy, textEn, textRu
+        const {textHy, textRu, textEn, imgOne, imgTwo, imgThree} = req.body
+        const newDown = await AboutDown.create({
+            textHy, textRu, textEn, imgOne, imgTwo, imgThree
         })
-
-        return res.json(newAbout)
-    }catch (e) {
-        console.log("something went wrong",e)
-    }
-
-}
-
-const get = async (req, res) => {
-    try {
-        const aboutUs = await AboutUs.findAll({
-            limit:1,
-        })
-        return res.json(aboutUs)
+        return res.json(newDown)
     } catch (e) {
         console.log("something went wrong", e)
     }
 }
 
-const editImage = async (req,res) => {
-    try{
-        const {image,imageId} = req.body
-        const item = await AboutUs.findOne({where:{id:1}})
-        const aboutImages = item.images.split(",")
-        aboutImages[imageId] = image
-        item.images = aboutImages.toString()
-        await item.save()
-        return res.json(item)
-    }catch (e) {
-        console.log('something went wrong',e)
+const getAllDown = async (req, res) => {
+    try {
+        const abouts = await AboutDown.findAll({where: {id: 1}})
+        return res.json(abouts)
+    } catch (e) {
+        console.log("something went wrong", e)
     }
 }
+
+const editDown = async (req, res) => {
+    try {
+        const {textHy, textRu, textEn, imgOne, imgTwo, imgThree} = req.body
+        const banner = await AboutDown.findOne({where: {id: 1}});
+        banner.textHy = textHy
+        banner.textRu = textRu
+        banner.textEn = textEn
+        banner.imgOne = imgOne
+        banner.imgTwo = imgTwo
+        banner.imgThree = imgThree
+        await banner.save()
+        return res.json(banner)
+    } catch (e) {
+        console.log("something went wrong", e)
+    }
+}
+
 module.exports = {
-    create,
-    edit,
-    get,
-    editImage
-}
+    createUp,
+    getAllUp,
+    editUp,
 
+    createDown,
+    getAllDown,
+    editDown
+}

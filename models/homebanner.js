@@ -14,13 +14,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   HomeBanner.init({
-    titleHy: DataTypes.STRING,
-    titleEn: DataTypes.STRING,
-    titleRu: DataTypes.STRING,
-    subTitleHy: DataTypes.STRING,
-    subTitleEn: DataTypes.STRING,
-    subTitleRu: DataTypes.STRING,
     image: DataTypes.STRING,
+    titleHy:DataTypes.STRING,
+    titleRu:DataTypes.STRING,
+    titleEn:DataTypes.STRING,
+    textHy: DataTypes.STRING(1234),
+    textRu: DataTypes.STRING(1234),
+    textEn: DataTypes.STRING(1234)
   }, {
     sequelize,
     modelName: 'HomeBanner',

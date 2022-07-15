@@ -1,36 +1,32 @@
-const Contacts = require("../models").Contacts
-
-
+const Contact = require("../models").Contacts
 const edit = async (req, res) => {
-    const {id, location, email, phone, facebook, instagram} = req.body
-
-
-    const thisContacts = await Contacts.findOne({where: {id}})
-
-    thisContacts.location = location || thisContacts.location
-    thisContacts.email = email || thisContacts.email
-    thisContacts.phone = phone || thisContacts.phone
-    thisContacts.facebook = facebook || thisContacts.facebook
-    thisContacts.instagram = instagram || thisContacts.instagram
-    thisContacts.save()
-
-    return res.json(thisContacts)
-}
-
-const get = async (req, res) => {
     try {
-        const contacts = await Contacts.findAll({
-            limit: 1,
+        const {location, phone, email, facebook, instagram} = req.body
+        const item = await Contact.findOne({
+            where: {id: 1}
         })
-
-        return res.json(contacts)
+        item.location = location
+        item.phone = phone
+        item.email = email
+        item.facebook = facebook
+        item.instagram = instagram
+        await item.save()
+        return res.json(item)
     } catch (e) {
-        console.log("something went wrong", e)
+        console.log('something went wrong', e)
     }
 }
 
+const getAll = async (req,res) => {
+    try{
+        const items = await Contact.findAll()
+        return res.json(items)
+    }catch (e) {
+        console.log('something went wrong',e)
+    }
+}
 
 module.exports = {
     edit,
-    get
+    getAll
 }

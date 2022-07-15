@@ -14,13 +14,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   HomeFooter.init({
+    image: DataTypes.STRING,
     titleHy: DataTypes.STRING,
     titleRu: DataTypes.STRING,
     titleEn: DataTypes.STRING,
-    subTitleHy: DataTypes.STRING,
-    subTitleRu: DataTypes.STRING,
-    subTitleEn: DataTypes.STRING,
-    image: DataTypes.STRING
+    textHy: DataTypes.STRING(1234),
+    textRu: DataTypes.STRING(1234),
+    textEn: DataTypes.STRING(1234)
   }, {
     sequelize,
     modelName: 'HomeFooter',

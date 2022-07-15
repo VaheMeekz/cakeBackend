@@ -15,8 +15,8 @@ module.exports = (sequelize, DataTypes) => {
   }
   Contacts.init({
     location: DataTypes.STRING,
-    email: DataTypes.STRING,
     phone: DataTypes.STRING,
+    email: DataTypes.STRING,
     facebook: DataTypes.STRING,
     instagram: DataTypes.STRING
   }, {

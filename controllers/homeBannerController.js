@@ -1,72 +1,58 @@
-//constants
 const HomeBanner = require("../models").HomeBanner
-const cloudinary = require("../utils/cloudinary/cloudinary")
 
 const create = async (req, res) => {
-    const {titleHy, titleEn, titleRu, subTitleHy, subTitleRu, subTitleEn} = req.body
-
-    //upload to cloudinary
-    const result = await cloudinary.uploader.upload(req.file.path);
-
-    const banner = await HomeBanner.create({
-        titleHy,
-        titleEn,
-        titleRu,
-        subTitleHy,
-        subTitleRu,
-        subTitleEn,
-        image: result.secure_url,
-        cloudinary_id: result.public_id,
-    })
-}
-
-const get = async (req, res) => {
     try {
-        const banner = await HomeBanner.findAll({
-            limit: 1
+        const {image, textHy, textRu, textEn} = req.body
+        const newSlide = await HomeBanner.create({
+            image, textHy, textRu, textEn
         })
-        return res.json(banner)
+        return res.json(newSlide)
     } catch (e) {
-        console.log("something went wrong", e)
+        console.log('something went wrong', e)
     }
 }
 
-const edit = async (req, res) => {
+const getAll = async (req, res) => {
     try {
-        const {titleHy, titleEn, titleRu, subTitleHy, subTitleRu, subTitleEn, image} = req.body
+        const allSlides = await HomeBanner.findAll()
+        return res.json(allSlides)
+    } catch (e) {
+        console.log('something went wrong', e)
+    }
+}
 
-        const oldBanner = await HomeBanner.destroy({where: {id: 1}})
-        const newBaner = await HomeBanner.create({
-            id: 1, titleHy, titleEn, titleRu, subTitleHy, subTitleRu, subTitleEn, image
+const deleteSlide = async (req, res) => {
+    try {
+        const {id} = req.body
+        await HomeBanner.destroy({
+            where: {id}
         })
-        return res.json(newBaner)
-
+        return res.json({success: true})
     } catch (e) {
-        console.log("something went wrong", e)
+        console.log('something went wrong', e)
     }
 }
 
-const editImage = async (req, res) => {
+const editSlide = async (req, res) => {
     try {
-        const {image} = req.body
-
-        const banner = await HomeBanner.findOne({where: {id: 1}})
-        // const newBaner = await HomeBanner.create({
-        //     id:1, titleHy, titleEn, titleRu, subTitleHy, subTitleRu, subTitleEn, image
-        // })
-        banner.image = [image].toString()
-        banner.save()
-        return res.json(banner)
-
+        const {id, image, textHy, textRu, textEn} = req.body
+        const slide = await HomeBanner.findOne({
+            where: {id}
+        })
+        slide.image = image
+        slide.textHy = textHy
+        slide.textRu = textRu
+        slide.textEn = textEn
+        await slide.save()
+        return res.json(slide)
     } catch (e) {
-        console.log("something went wrong", e)
+        console.log('something went wrong', e)
     }
 }
-
 
 module.exports = {
     create,
-    get,
-    edit,
-    editImage
+    getAll,
+    deleteSlide,
+    editSlide
 }
